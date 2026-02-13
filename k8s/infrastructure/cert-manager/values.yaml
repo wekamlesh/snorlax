@@ -1,0 +1,22 @@
+# k8s/infrastructure/cert-manager/values.yaml
+
+# Install CRDs (Custom Resource Definitions) during installation
+installCRDs: true
+
+# Resource limits for your 8GB RAM constraint
+resources:
+  requests:
+    cpu: 10m
+    memory: 32Mi
+  limits:
+    cpu: 100m
+    memory: 128Mi
+
+webhook:
+  resources:
+    requests:
+      cpu: 10m
+      memory: 32Mi
+    limits:
+      cpu: 100m
+      memory: 128Mi

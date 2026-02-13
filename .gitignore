@@ -1,0 +1,8 @@
+# Ignore generated files
+k8s/infrastructure/*/generated-manifest.yaml
+
+# Ignore environment files (secrets)
+.env
+
+# Ignore kubeconfig
+kubeconfig.yaml

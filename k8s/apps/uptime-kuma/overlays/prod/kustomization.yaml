@@ -1,0 +1,16 @@
+resources:
+  - ../../base
+
+# This is the magic part: It finds and replaces text
+replacements:
+  - source:
+      kind: ConfigMap
+      name: domain-config
+      fieldPath: data.domain
+    targets:
+      - select:
+          kind: Ingress
+          name: uptime-kuma-ingress
+        fieldPaths:
+          - spec.tls.[0].hosts.[0]
+          - spec.rules.[0].host

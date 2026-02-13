@@ -1,0 +1,16 @@
+# k8s/infrastructure/nginx-ingress/values.yaml
+
+controller:
+  # K3s includes a LoadBalancer called ServiceLB.
+  # Setting this to LoadBalancer tells K3s to assign the VM's IP to this service.
+  service:
+    type: LoadBalancer
+  
+  # Resource limits are critical for your 8GB RAM constraint.
+  resources:
+    requests:
+      cpu: 100m
+      memory: 90Mi
+    limits:
+      cpu: 500m
+      memory: 256Mi
