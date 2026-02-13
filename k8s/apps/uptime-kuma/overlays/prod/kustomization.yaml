@@ -1,5 +1,6 @@
 resources:
   - ../../base
+  - configmap.yaml
 
 # This is the magic part: It finds and replaces text
 replacements:
