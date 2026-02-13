@@ -1,8 +1,0 @@
-apiVersion: v1
-kind: ConfigMap
-metadata:
-  name: domain-config
-  namespace: dev-environment
-data:
-  # This is the only place you define your domain for this app
-  domain: status.kamleshmerugu.me
