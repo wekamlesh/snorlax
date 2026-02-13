@@ -1,0 +1,19 @@
+uptime-kuma:
+  ingress:
+    enabled: true
+    className: nginx
+    annotations:
+      cert-manager.io/cluster-issuer: letsencrypt-prod
+    hosts:
+      - host: uptime.replace-me.com
+        paths:
+          - path: /
+            pathType: ImplementationSpecific
+    tls:
+      - secretName: uptime-kuma-tls
+        hosts:
+          - uptime.replace-me.com
+  persistence:
+    enabled: true
+    accessMode: ReadWriteOnce
+    size: 1Gi

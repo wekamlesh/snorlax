@@ -1,14 +1,14 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: app-of-apps
+  name: app-of-apps-custom
   namespace: argocd
 spec:
   project: default
   source:
     repoURL: https://github.com/wekamlesh/snorlax.git
-    targetRevision: master
-    path: k8s/apps/app-of-apps
+    targetRevision: master # Or your local branch if valid
+    path: k8s/apps/app-of-apps/overlays/custom # Points to your custom overlay
   destination:
     server: https://kubernetes.default.svc
     namespace: argocd
