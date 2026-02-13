@@ -14,6 +14,9 @@ spec:
     helm:
       valueFiles:
         - values.yaml
+      parameters:
+        - name: "kube-prometheus-stack.grafana.ingress.hosts[0]"
+          value: "grafana.kamleshmerugu.me"
   destination:
     server: https://kubernetes.default.svc
     namespace: observability

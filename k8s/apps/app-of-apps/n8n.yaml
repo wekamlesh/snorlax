@@ -14,6 +14,13 @@ spec:
     helm:
       valueFiles:
         - values.yaml
+      parameters:
+        - name: "n8n.ingress.hosts[0].host"
+          value: "n8n.kamleshmerugu.me"
+        - name: "n8n.ingress.tls[0].hosts[0]"
+          value: "n8n.kamleshmerugu.me"
+        - name: "n8n.env.WEBHOOK_URL"
+          value: "https://n8n.kamleshmerugu.me/"
   destination:
     server: https://kubernetes.default.svc
     namespace: n8n

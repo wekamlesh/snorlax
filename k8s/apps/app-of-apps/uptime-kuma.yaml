@@ -14,6 +14,11 @@ spec:
     helm:
       valueFiles:
         - values.yaml
+      parameters:
+        - name: "uptime-kuma.ingress.hosts[0].host"
+          value: "uptime.kamleshmerugu.me"
+        - name: "uptime-kuma.ingress.tls[0].hosts[0]"
+          value: "uptime.kamleshmerugu.me"
   destination:
     server: https://kubernetes.default.svc
     namespace: uptime-kuma
