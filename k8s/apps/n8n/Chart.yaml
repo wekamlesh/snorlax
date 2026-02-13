@@ -7,5 +7,5 @@ appVersion: "1.0.0"
 dependencies:
   - name: n8n
     # Using a recent version from community-charts
-    version: "0.18.1" 
+    version: "1.16.28" 
     repository: "https://community-charts.github.io/helm-charts"
