@@ -6,9 +6,8 @@ metadata:
 spec:
   project: default
   source:
-    # TODO: Replace with your actual Git repository URL
-    repoURL: https://github.com/YOUR_USERNAME/YOUR_REPO.git
-    targetRevision: HEAD
+    repoURL: https://github.com/wekamlesh/snorlax.git
+    targetRevision: master
     path: k8s/apps/uptime-kuma/overlays/prod
   destination:
     server: https://kubernetes.default.svc
